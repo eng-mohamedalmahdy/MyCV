@@ -1,0 +1,470 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.3, 10 May 2020) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+% This fork/modified version has been made by Nicolás Omar González Passerino (nicolas.passerino@gmail.com, 15 Oct 2020)
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you need to pass whatever options to xcolor
+\PassOptionsToPackage{dvipsnames}{xcolor}
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+%% AltaCV uses the fontawesome5 and academicons fonts
+%% and packages.
+%% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=1.2cm,right=1.2cm,top=1cm,bottom=1cm,columnsep=0.75cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+\usepackage{blindtext}
+\usepackage{multicol}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+% If using xelatex or lualatex:
+\setmainfont{Roboto Slab}
+\setsansfont{Lato}
+\renewcommand{\familydefault}{\sfdefault}
+\else
+% If using pdflatex:
+\usepackage[rm]{roboto}
+\usepackage[defaultsans]{lato}
+% \usepackage{sourcesanspro}
+\renewcommand{\familydefault}{\sfdefault}
+\fi
+
+
+% ----- LIGHT MODE -----
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{PrimaryColor}{HTML}{386641}
+\definecolor{SecondaryColor}{HTML}{BC4749}
+\definecolor{ThirdColor}{HTML}{F3890B}
+\definecolor{BackgroundColor}{HTML}{F2E8CF}
+\colorlet{name}{PrimaryColor}
+\colorlet{tagline}{PrimaryColor}
+\colorlet{heading}{PrimaryColor}
+\colorlet{headingrule}{ThirdColor}
+\colorlet{subheading}{SecondaryColor}
+\colorlet{accent}{SecondaryColor}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Palate1
+% \definecolor{SlateGrey}{HTML}{2E2E2E}
+% \definecolor{LightGrey}{HTML}{666666}
+% \definecolor{PrimaryColor}{HTML}{386641}
+% \definecolor{SecondaryColor}{HTML}{BC4749}
+% \definecolor{ThirdColor}{HTML}{F3890B}
+% \definecolor{BackgroundColor}{HTML}{F2E8CF}
+% \definecolor{tagcolor}{HTML}{91b945}
+% \definecolor{tagtextcolor}{HTML}{FFFFFF}
+
+
+%palate2
+% \definecolor{SlateGrey}{HTML}{F97015}
+% \definecolor{LightGrey}{HTML}{F97015}
+% \definecolor{PrimaryColor}{HTML}{F97015}
+% \definecolor{SecondaryColor}{HTML}{F97015}
+% \definecolor{ThirdColor}{HTML}{F97015}
+% \definecolor{BackgroundColor}{HTML}{1A0B01}
+% \definecolor{tagcolor}{HTML}{FA9049}
+% \definecolor{tagtextcolor}{HTML}{1A0B01}
+
+
+% ----- DARK MODE -----
+%\definecolor{BackgroundColor}{HTML}{242424}
+%\definecolor{SlateGrey}{HTML}{6F6F6F}
+%\definecolor{LightGrey}{HTML}{ABABAB}
+%\definecolor{PrimaryColor}{HTML}{3F7FFF}
+%\colorlet{name}{PrimaryColor}
+%\colorlet{tagline}{PrimaryColor}
+%\colorlet{heading}{PrimaryColor}
+%\colorlet{headingrule}{PrimaryColor}
+%\colorlet{subheading}{PrimaryColor}
+%\colorlet{accent}{PrimaryColor}
+%\colorlet{emphasis}{LightGrey}
+%\colorlet{body}{LightGrey}
+%\pagecolor{BackgroundColor}
+
+
+\pagecolor{BackgroundColor}
+
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\small\bfseries}
+\renewcommand{\cvsectionfont}{\large\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+%% \addbibresource{sample.bib}
+% \documentclass[12pt]{scrartcl}
+\usepackage{lipsum}
+\usepackage{wasysym}
+%
+%
+\usetikzlibrary{calc}
+%
+\begin{document}
+% \begin{tikzpicture}[overlay,remember picture]
+
+%         \draw [xshift=4mm,line width=1pt,rounded corners=16pt]
+%         ($ (current page.north west) + (.5cm,-.5cm) $)
+%         rectangle
+%         ($ (current page.south east) + (-.5cm,.5cm) $);
+
+% \end{tikzpicture}
+%
+    \name{Mohamed Almahdy}
+    \tagline{Mobile Applications Developer}
+    %% You can add multiple photos on the left or right
+
+    \personalinfo{
+        \email{engmohamedalmahdy@gmail.com}\smallskip
+        \phone{+201096475710}
+        \location{Nasr City, Cairo}
+        \linkedin{eng-mohamed-almahdy}
+        \github{eng-mohamedalmahdy}
+        \youtube{LightFeather42}
+        \blogger{lightfeather42.blogspot.com}
+
+
+    %\medium{nicolasomar}
+    %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
+    % \orcid{0000-0000-0000-0000}
+    %% You can add your own arbtrary detail with
+    %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+    % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
+    %% Or you can declare your own field with
+    %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+    % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+    % \gitlab{your_id}
+    }
+
+    \makecvheader
+    %% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+    % \AtBeginEnvironment{itemize}{\small}
+
+    %% Set the left/right column width ratio to 6:4.
+    \columnratio{0.33333}
+
+    % Start a 2-column paracol. Both the left and right columns will automatically
+    % break across pages if things get too long.
+    \begin{paracol}{2}
+
+        % ----- LEARNING -----
+        \cvsection{Programming Languages}
+        \cvtag{Kotlin}
+        \cvtag{Java}
+        \cvtag{Swift}
+        \cvtag{HTML \& CSS}
+
+        \cvsection{Frameworks}
+        \cvtag{Native Android}
+        \cvtag{Native iOS}
+
+        \cvsection{Android skills}
+        \cvtag{Retrofit}
+        \cvtag{Glide}
+        \cvtag{Picasso}
+        \cvtag{Room}
+        \cvtag{Realm}
+        \cvtag{Rx Java \& Kotlin}
+        \cvtag{Flow}
+        \cvtag{Coroutines}
+        \cvtag{Dagger hilt}
+        \cvtag{Koin}
+        \cvtag{Jetpack compose}
+
+        \cvsection{iOS skills}
+        \cvtag{UIkit}
+        \cvtag{Swift UI}
+        \cvtag{Storyboard}
+        \linebreak
+        \cvtag{Auto layout}
+        \cvtag{Core Data}
+
+        \cvsection{General Software skills}
+        \cvtag{Problem solving}
+        \cvtag{VCS}
+        \cvtag{Firebase}
+        \linebreak
+        \cvtag{Apps Localization}
+
+        \cvsection{Software Concepts}
+        \cvtag{Software Engineering \& SDLC}
+        \cvtag{OOP}
+        \cvtag{Design patterns}
+        \cvtag{MVC}
+        \cvtag{MVVM}
+        \cvtag{Functional Programming}
+        \cvtag{Database}
+        \cvtag{RESTful APIs}
+        \cvtag{SOLID Principles}
+        \cvtag{Clean Architecture}
+        \linebreak
+        \cvtag{Concurrent Programming}
+        \linebreak
+        \cvtag{Dependency Injection}
+
+        \cvsection{Soft Skills}
+        \cvtag{Presentation Skills}
+        \cvtag{Teaching Skills}
+        \cvtag{Marketing}
+        \cvtag{Leadership Skills}
+
+
+        % ----- LEARNING -----
+
+        \newpage
+%         \begin{tikzpicture}[overlay,remember picture]
+
+%         \draw [xshift=4mm,line width=1pt,rounded corners=16pt]
+%         ($ (current page.north west) + (.5cm,-.5cm) $)
+%         rectangle
+%         ($ (current page.south east) + (-.5cm,.5cm) $);
+
+% \end{tikzpicture}
+        %% Switch to the right column. This will now automatically move to the second
+        %% page if the content is too long.
+        \switchcolumn
+
+        % ----- ABOUT ME -----
+        \cvsection{Profile}
+        \begin{quote}
+
+            Innovative Software engineer experienced in \textbf{developing Mobile Apps} with some\textbf{practical experience}  in \textbf{Web development} \& \linebreak\textbf{digital marketing};
+            Aiming to gain more experience in software development.
+
+        \end{quote}
+        % ----- ABOUT ME -----
+
+        % ----- EXPERIENCE -----
+        \cvsection{Experience}
+        \cvevent{JR. Software developer  }{| Virtual Worker Now}{12/2021 -- 5/2022}{Cairo, Egypt}
+        \begin{itemize}
+            \item 3 Websites contributions
+            \item 2 Android Apps contributions
+            \item 1 iOS App contribution
+
+        \end{itemize}
+        \divider
+
+        \cvevent{Teaching }{| Light Feather}{2020 - NOW}{}
+        \begin{itemize}
+            \item  \href{https://www.youtube.com/c/LightFeather42}{YouTube Channel}
+            \item  \href{https://lightfeather42.blogspot.com/}{Blog}
+
+        \end{itemize}
+        \divider
+        \cvevent{JR. Android developer }{| ElMnassa Innovation}{6/2020 -- 12/2020}{Cairo, Egypt}
+        \divider
+
+        % ----- EXPERIENCE -----
+
+        % ----- EDUCATION -----
+        \cvsection{Education}
+        \cvevent{B.S Computer Engineering}
+        {| Al-Azhar University.}
+        {2017 -- 2021}{Cairo, Egypt}
+        \divider
+
+        \cvevent{Graduation project:  }
+        {Zakerly ( E-learning mobile App )}{2021}{}
+        \begin{itemize}
+            \item Grade : Excellent
+        \end{itemize}
+        \divider
+
+        % ----- EDUCATION -----
+
+        % ----- Courses -----
+
+        \begin{multicols}{2}
+            \cvsection{Courses}
+            \cvevent
+            {\faApple  iOS using SwiftUI} {| Stanford}{}{}
+
+            \divider
+
+            \cvevent
+            {\faAndroid  Kotlin boot camp}{| Udacity}{}{}
+            \divider
+
+            \cvevent
+            {\faAndroid Android Dev in Java}{| Udacity}{}{}
+            \divider
+
+            \cvevent
+            {\faEdit 5.95J Teaching Course}{| MIT}{}{}
+            \divider
+
+            \cvevent {\faApple iOS Boot Camp}{| Tuwaiq ACAD}{}{}
+
+            \columnbreak
+            \cvsection{Books}
+            \cvevent {\faBook Clean Architecture}{}{}{}
+            \cvevent {\faBook Algorithms Unplugged}{}{}{}
+            \cvevent {\faBook Head First OOP}{}{}{}
+            \cvevent {\faBook Grokking Algorithms}{}{}{}
+            \cvevent {\faBook Dotcom Secrets}{}{}{}
+        \end{multicols}
+
+        % ----- Courses -----
+    \end{paracol}
+    \begin{paracol}{1}
+        \cvsection{Personal Projects}
+
+        \cvevent{\textbf{Islami 180}}
+        {\cvrepo{|\faLock\faAndroid}
+        {https://play.google.com/store/apps/details?id=com.lightfeather.islami180}}{}{}
+        \begin{itemize}
+            \item \textbf{}Islamic application contains:
+            Quran + Quran Tafseer - Prayer Azan - Qibla Finder - Azkar - Hijri Calendar - Tasbeeh
+            \item \textbf{Used Technologies}: \textbf{MVVM -
+            Room database (for Quarn data persistence) -
+            Retrofit (for prayer azan API requests) -
+            Android navigation component -
+            Json to Gson serialization -
+            Work Manager -
+            Notifications Manager -
+            Alarm Manager
+            Senesor Manager And more
+            }
+        \end{itemize}
+        \divider
+
+        \cvevent{\textbf{Violet}}
+        {\cvrepo{|\faGithub\faAndroid}
+        {https://play.google.com/store/apps/details?id=com.lightfeather.violet}}{}{}
+        \begin{itemize}
+            \item Violet is a secret notes app where your notes can be accessed view the title of the note or 2FA method Your notes will also be stored in encrypted database so no one but you can see your notes
+            \item \textbf{Used Technologies}: \textbf{MVVM -
+            Live data -
+            Dagget hilt -
+            Room database (for Notes data persistence) -
+            Kotlin kotlin coroutines -
+            Encrypted shared preferences -
+            Android navigation component -
+            Json to Gson serialization -
+            Android Guide view -
+            Android lottie library -
+            Android localization library -
+            Android SDP library}
+        \end{itemize}
+        \divider
+
+        \cvevent{\textbf{Friends Keep}}
+        {\cvrepo{|\faGithub\faAndroid}
+        {https://play.google.com/store/apps/details?id=com.lightfeather.friendskeep}}{}{}
+        \begin{itemize}
+            \item \textbf{Friends Keep is an app where you add your favorite friends and every thing you need to remember about them and it will notify you with important dates like birth date}
+            \item \textbf{Used Technologies} : \textbf{MVVM -
+            Kotlin coroutines -
+            Koin -
+                Work manager -
+                Notification manager -
+                Room for data persistence -
+                Stored the images as compressed Base64 string -
+                Google ads SDK -
+                Live data -
+                Navigation component -
+                 Lotti animations
+                Circular image view}
+        \end{itemize}
+        \divider
+        
+        \cvevent{\textbf{Pet Matrices}}
+        {\cvrepo{|\faLock\faApple}
+        {}}{}{}
+        \begin{itemize}
+            \item \textbf{}Pet Matrices is a lifestyle application for your pets where you can record and track your pets activities and given calories, you also can record and track their health condition and get some nice advice from an expert
+            \item \textbf{Used Technologies} : \textbf{SwiftUI, REST API, MVVM archticture pattern, Swift GCD}
+        \end{itemize}
+        \divider
+        \cvevent{\textbf{Zakerly}}
+        {\cvrepo{|\faGithub\faAndroid}
+        {https://github.com/eng-mohamedalmahdy/Zakerly}}{}{}
+        \begin{itemize}
+            \item \textbf{}Zakerly is an app used to connect students with teachers to learn online as an E-learning service And helps them attending online sessions individuals or groups
+            \item \textbf{Used Technologies}: \textbf{MVVM
+            Firebase Kit (real time database \& cloud messaging)
+                Realm database (for data persistence)
+                Retrofit (for FCM API requests)
+                Android navigation component
+                Json to Gson serialization
+                Jitsi meet sdk}
+        \end{itemize}
+        \divider
+
+
+
+        \cvevent{\textbf{MusicHub}}
+        {\cvrepo{|\faGithub\faAndroid}
+        {https://github.com/eng-mohamedalmahdy/MusicHub}
+        }{}{}
+        \begin{itemize}
+            \item \textbf{} Music Player application with YouTube download
+            \item Technologies uses: \textbf{MVVM - Live data - Dagger hilt - SQLite  - coroutines - Kotlin Compose - Flows -\linebreak Foreground services - Custom notifications}
+        \end{itemize}
+        \divider
+        \cvevent{\textbf{GigaMan}}
+        {\cvrepo{|\faGithub\faGamepad}
+        {https://github.com/eng-mohamedalmahdy/GigaMan}}{}{}
+        \begin{itemize}
+            \item \textbf{}A platformer game based on the mega man game built using libgdx
+            \item \textbf{Used Technologies}: \textbf{Libgdx}
+        \end{itemize}
+        \divider
+        \cvevent{\textbf{ScheduleMe}}
+        {\cvrepo{|\faGithub\faAndroid}
+        {https://github.com/eng-mohamedalmahdy/ScheduleMe}}{}{}
+        \begin{itemize}
+            \item \textbf{}An android application were you can add appointments to get notified when they come and add some notes to each appointment Using MVC and Alarm manager
+        \end{itemize}
+        \divider
+        \cvevent{\textbf{Memorise}}
+        {\cvrepo{|\faGithub\faApple}
+        {https://github.com/eng-mohamedalmahdy/Memorise}
+        }{}{}
+        \begin{itemize}
+            \item \textbf{} Memorising game created with swift and Swift UI. \linebreak
+            A project for Stanford CS193p course at : https://cs193p.sites.stanford.edu/
+        \end{itemize}
+        \divider
+
+        \begin{center}
+            \textbf{\Large More Projects at my GitHub}
+            {\cvrepo{\faGithub}
+            {https://github.com/eng-mohamedalmahdy}}{}{}
+        \end{center}
+        \divider
+    \end{paracol}
+
+\end{document}

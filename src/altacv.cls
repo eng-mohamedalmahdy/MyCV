@@ -213,11 +213,11 @@
 \newcommand{\personalinfo}[1]{\def\@personalinfo{#1}}
 \NewInfoField{email}{\faAt}[mailto:]
 \NewInfoField{mailaddress}{\faEnvelope}
-\NewInfoField{phone}{\faPhone}
+\NewInfoField{phone}{\faPhoneSquare}
 \NewInfoField{homepage}{\faGlobe}[https://]
 \NewInfoField{twitter}{\faTwitter}[https://twitter.com/]
-\NewInfoField{linkedin}{\faLinkedin}[https://www.linkedin.com/in/]
-\NewInfoField{github}{\faGithub}[https://github.com/]
+\NewInfoField{linkedin}{\faLinkedin}[]
+\NewInfoField{github}{\faGithub}[]
 \NewInfoField{youtube}{\faIcon{youtube} }[https://www.youtube.com/c/]
 \NewInfoField{location}{\faMapMarker}
 % Fork: New optional options added for dev and medium accounts

@@ -324,9 +324,15 @@
   \smallskip
 }
 
-\definecolor{tagcolor}{HTML}{91b945}
+%-------- MONO MODE --------------
+\definecolor{tagcolor}{HTML}{000000}
 \definecolor{tagtextcolor}{HTML}{FFFFFF}
 
+%-------- Light MODE -------------
+%\definecolor{tagcolor}{HTML}{91b945}
+%\definecolor{tagtextcolor}{HTML}{FFFFFF}
+
+%------ DARK MODE -------------
 % \definecolor{tagcolor}{HTML}{FA9049}
 % \definecolor{tagtextcolor}{HTML}{1A0B01}
 

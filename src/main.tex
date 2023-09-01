@@ -54,28 +54,11 @@
 \fi
 
 % ----- MONO MODE -----
-\definecolor{SlateGrey}{HTML}{2E2E2E}
-\definecolor{LightGrey}{HTML}{666666}
-\definecolor{PrimaryColor}{HTML}{000000}
-\definecolor{SecondaryColor}{HTML}{000000}
-\definecolor{ThirdColor}{HTML}{000000}
-\definecolor{BackgroundColor}{HTML}{FFFFFF}
-\colorlet{name}{PrimaryColor}
-\colorlet{tagline}{PrimaryColor}
-\colorlet{heading}{PrimaryColor}
-\colorlet{headingrule}{ThirdColor}
-\colorlet{subheading}{SecondaryColor}
-\colorlet{accent}{SecondaryColor}
-\colorlet{emphasis}{SlateGrey}
-\colorlet{body}{LightGrey}
-
-% ----- LIGHT MODE -----
 %\definecolor{SlateGrey}{HTML}{2E2E2E}
 %\definecolor{LightGrey}{HTML}{666666}
-%\definecolor{PrimaryColor}{HTML}{386641}
-%\definecolor{SecondaryColor}{HTML}{BC4749}
-%\definecolor{ThirdColor}{HTML}{F3890B}
-%\definecolor{BackgroundColor}{HTML}{F2E8CF}
+%\definecolor{PrimaryColor}{HTML}{000000}
+%\definecolor{SecondaryColor}{HTML}{000000}
+%\definecolor{ThirdColor}{HTML}{000000}
 %\colorlet{name}{PrimaryColor}
 %\colorlet{tagline}{PrimaryColor}
 %\colorlet{heading}{PrimaryColor}
@@ -84,43 +67,23 @@
 %\colorlet{accent}{SecondaryColor}
 %\colorlet{emphasis}{SlateGrey}
 %\colorlet{body}{LightGrey}
+% Define your branding colors
 
-% Palate1
-% \definecolor{SlateGrey}{HTML}{2E2E2E}
-% \definecolor{LightGrey}{HTML}{666666}
-% \definecolor{PrimaryColor}{HTML}{386641}
-% \definecolor{SecondaryColor}{HTML}{BC4749}
-% \definecolor{ThirdColor}{HTML}{F3890B}
-% \definecolor{BackgroundColor}{HTML}{F2E8CF}
-% \definecolor{tagcolor}{HTML}{91b945}
-% \definecolor{tagtextcolor}{HTML}{FFFFFF}
+\definecolor{PrimaryColor}{HTML}{2E675F}  % Main text and headings
+\definecolor{SecondaryColor}{HTML}{0C0A49}  % Subheadings and accents
+\definecolor{TertiaryColor}{HTML}{983D0C}   % Highlight or accent color
+\definecolor{QuaternaryColor}{HTML}{9B206F} % Alternative accent color
+\definecolor{BackgroundColor}{HTML}{F2F2F2}
 
+\colorlet{name}{PrimaryColor}
+\colorlet{tagline}{PrimaryColor}
+\colorlet{heading}{PrimaryColor}
+\colorlet{headingrule}{PrimaryColor}
+\colorlet{subheading}{SecondaryColor}
+\colorlet{accent}{TertiaryColor}
+\colorlet{emphasis}{SecondaryColor}
+\colorlet{body}{LightGrey}  % Assuming you want to keep LightGrey as the background color
 
-%palate2
-% \definecolor{SlateGrey}{HTML}{F97015}
-% \definecolor{LightGrey}{HTML}{F97015}
-% \definecolor{PrimaryColor}{HTML}{F97015}
-% \definecolor{SecondaryColor}{HTML}{F97015}
-% \definecolor{ThirdColor}{HTML}{F97015}
-% \definecolor{BackgroundColor}{HTML}{1A0B01}
-% \definecolor{tagcolor}{HTML}{FA9049}
-% \definecolor{tagtextcolor}{HTML}{1A0B01}
-
-
-% ----- DARK MODE -----
-%\definecolor{BackgroundColor}{HTML}{242424}
-%\definecolor{SlateGrey}{HTML}{6F6F6F}
-%\definecolor{LightGrey}{HTML}{ABABAB}
-%\definecolor{PrimaryColor}{HTML}{3F7FFF}
-%\colorlet{name}{PrimaryColor}
-%\colorlet{tagline}{PrimaryColor}
-%\colorlet{heading}{PrimaryColor}
-%\colorlet{headingrule}{PrimaryColor}
-%\colorlet{subheading}{PrimaryColor}
-%\colorlet{accent}{PrimaryColor}
-%\colorlet{emphasis}{LightGrey}
-%\colorlet{body}{LightGrey}
-%\pagecolor{BackgroundColor}
 
 
 \pagecolor{BackgroundColor}
@@ -162,7 +125,7 @@
 
     \personalinfo{
         \email{engmohamedalmahdy@gmail.com}\smallskip
-        \phone{+201096475710}
+        \mobile{+201096475710}
         \location{Nasr City, Cairo}
         \youtube{LightFeather42}
         \linkedin{https://www.linkedin.com/in/eng-mohamed-almahdy}
@@ -185,7 +148,7 @@
     % \AtBeginEnvironment{itemize}{\small}
 
     %% Set the left/right column width ratio to 6:4.
-    \columnratio{0.33333}
+    \columnratio{0.333334}
 
     % Start a 2-column paracol. Both the left and right columns will automatically
     % break across pages if things get too long.
@@ -210,10 +173,10 @@
         \cvtag{Realm}
         \cvtag{Rx Java \& Kotlin}
         \cvtag{Flow}
+        \cvtag{Koin}
         \cvtag{Coroutines}
         \cvtag{Dagger hilt}
-        \cvtag{Koin}
-        \cvtag{Jetpack compose}
+        \cvtag{Kotlin Compose}
 
         \cvsection{iOS skills}
         \cvtag{UIkit}
@@ -246,6 +209,7 @@
         \cvtag{RESTful APIs}
         \cvtag{SOLID Principles}
         \cvtag{Clean Architecture}
+        \cvtag{Modularization}
         \linebreak
         \cvtag{Concurrent Programming}
         \linebreak
@@ -271,15 +235,20 @@
         \cvsection{Profile}
         \begin{quote}
 
-            Innovative Software engineer experienced in \textbf{developing Mobile Apps} with some\textbf{practical experience}  in \textbf{Web development} \& \linebreak\textbf{digital marketing};
-            Aiming to gain more experience in software development.
-
+            Innovative Mobile Apps Engineer with \textbf{2+ years of experience} , created and maintained \textbf{10+ mobile apps}.
+            I also Some possess skills in \textbf{Digital marketing}, making me a versatile professional in the tech industry.
+            My focus is on crafting user-centric mobile applications, and I'm passionate about creating software solutions.
+            Eager to contribute to the dynamic field of software development.
         \end{quote}
         % ----- ABOUT ME -----
 
         % ----- EXPERIENCE -----
         \cvsection{Experience}
-        \cvevent{JR. Software developer  }{| Virtual Worker Now}{12/2021 -- 5/2022}{Cairo, Egypt}
+
+        \cvevent{Mid Level Android developer  }{| \textbf{DTag}}{04/2023 -- Now}{Cairo, Egypt}
+        \divider
+
+        \cvevent{JR. Software developer  }{| \textbf{Virtual Worker Now}}{12/2021 -- 5/2022}{Cairo, Egypt}
         \begin{itemize}
             \item 3 Websites contributions
             \item 2 Android Apps contributions
@@ -288,31 +257,28 @@
         \end{itemize}
         \divider
 
-        \cvevent{Teaching }{| Light Feather}{2022 - NOW}{}
+        \cvevent{Teaching }{| \textbf{Light Feather}}{2022 - NOW}{}
         \begin{itemize}
             \item  \href{https://www.youtube.com/c/LightFeather42}{YouTube Channel}
             \item  \href{https://lightfeather42.blogspot.com/}{Blog}
 
         \end{itemize}
         \divider
-        \cvevent{JR. Android developer }{| ElMnassa Innovation}{6/2020 -- 12/2020}{Cairo, Egypt}
+        \cvevent{JR. Android developer }{| \textbf{ElMnassa Innovation}}{6/2020 -- 12/2020}{Cairo, Egypt}
         \divider
 
         % ----- EXPERIENCE -----
 
         % ----- EDUCATION -----
         \cvsection{Education}
-        \cvevent{B.S Computer Engineering}
-        {| Al-Azhar University.}
-        {2017 -- 2021}{Cairo, Egypt}
-        \divider
-
-        \cvevent{Graduation project:  }
-        {Zakerly ( E-learning mobile App )}{2021}{}
+        \cvevent{B.S Computer Engineering}{| \textbf{Al-Azhar University.}}{2017 -- 2021}{Cairo, Egypt}
         \begin{itemize}
-            \item Grade : Excellent
+            \item Zakerly ( E-learning mobile App )
+            \begin{itemize}
+                \item Grade : Excellent
+            \end{itemize}
         \end{itemize}
-        \divider
+
 
         % ----- EDUCATION -----
 
@@ -321,23 +287,23 @@
         \begin{multicols}{2}
             \cvsection{Courses}
             \cvevent
-            {\faApple  iOS using SwiftUI} {| Stanford}{}{}
+            {\faApple  iOS using SwiftUI} {| \textbf{Stanford}}{}{}
 
             \divider
 
             \cvevent
-            {\faAndroid  Kotlin boot camp}{| Udacity}{}{}
+            {\faAndroid  Kotlin boot camp}{| \textbf{Udacity}}{}{}
             \divider
 
             \cvevent
-            {\faAndroid Android Dev in Java}{| Udacity}{}{}
+            {\faAndroid Android Dev in Java}{| \textbf{Udacity}}{}{}
             \divider
 
             \cvevent
-            {\faEdit 5.95J Teaching Course}{| MIT}{}{}
+            {\faEdit 5.95J Teaching Course}{| \textbf{MIT}}{}{}
             \divider
 
-            \cvevent {\faApple iOS Boot Camp}{| Tuwaiq ACAD}{}{}
+            \cvevent {\faApple iOS Boot Camp}{| \textbf{Tuwaiq ACAD}}{}{}
 
             \columnbreak
             \cvsection{Recent Books Readings}
@@ -354,8 +320,15 @@
     \begin{paracol}{1}
         \cvsection{Personal Projects}
 
+        \cvevent{\textbf{Samoolah}}{\cvrepo{|\faLock\faAndroid}{}}{}{}
+        \begin{itemize}
+            \item \textbf{Services Provider} App With 2 Distributions 1 For the Client 1 For the Technician
+            \item \textbf{Used Technologies} : MVVM with \textbf{Modularization} - \textbf{Kotlin Compose} - Rest APIs with Retrofit \& Gson Serialization - Navigation Component - Kotlin Coroutines with Flows
+        \end{itemize}
+        \divider
+
         \cvevent{\textbf{Islami 180}}
-        {\cvrepo{|\faLock\faAndroid}
+        {\cvrepo{|\faGooglePlay\faAndroid}
         {https://play.google.com/store/apps/details?id=com.lightfeather.islami180}}{}{}
         \begin{itemize}
             \item \textbf{}Islamic application contains:
@@ -374,7 +347,7 @@
         \divider
 
         \cvevent{\textbf{Violet}}
-        {\cvrepo{|\faGithub\faAndroid}
+        {\cvrepo{|\faGithub\faAndroid\faGooglePlay}
         {https://play.google.com/store/apps/details?id=com.lightfeather.violet}}{}{}
         \begin{itemize}
             \item Violet is a secret notes app where your notes can be accessed view the title of the note or 2FA method Your notes will also be stored in encrypted database so no one but you can see your notes
@@ -394,25 +367,25 @@
         \divider
 
         \cvevent{\textbf{Friends Keep}}
-        {\cvrepo{|\faGithub\faAndroid}
+        {\cvrepo{|\faGithub\faAndroid\faGooglePlay}
         {https://play.google.com/store/apps/details?id=com.lightfeather.friendskeep}}{}{}
         \begin{itemize}
             \item \textbf{Friends Keep is an app where you add your favorite friends and every thing you need to remember about them and it will notify you with important dates like birth date}
             \item \textbf{Used Technologies} : \textbf{MVVM -
             Kotlin coroutines -
             Koin -
-                Work manager -
-                Notification manager -
-                Room for data persistence -
-                Stored the images as compressed Base64 string -
-                Google ads SDK -
-                Live data -
-                Navigation component -
-                 Lotti animations
-                Circular image view}
+            Work manager -
+            Notification manager -
+            Room for data persistence -
+            Stored the images as compressed Base64 string -
+            Google ads SDK -
+            Live data -
+            Navigation component -
+            Lotti animations
+            Circular image view}
         \end{itemize}
         \divider
-        
+
         \cvevent{\textbf{Pet Matrices}}
         {\cvrepo{|\faLock\faApple}
         {}}{}{}
@@ -436,17 +409,17 @@
         \end{itemize}
         \divider
 
-
-
         \cvevent{\textbf{MusicHub}}
         {\cvrepo{|\faGithub\faAndroid}
         {https://github.com/eng-mohamedalmahdy/MusicHub}
         }{}{}
         \begin{itemize}
             \item \textbf{} Music Player application with YouTube download
-            \item Technologies uses: \textbf{MVVM - Live data - Dagger hilt - SQLite  - coroutines - Kotlin Compose - Flows -\linebreak Foreground services - Custom notifications}
+            \item Technologies uses: \textbf{MVVM - Live data - Dagger hilt - SQLite - coroutines - Kotlin Compose - Flows -\linebreak Foreground services - Custom notifications}
         \end{itemize}
         \divider
+
+
         \cvevent{\textbf{GigaMan}}
         {\cvrepo{|\faGithub\faGamepad}
         {https://github.com/eng-mohamedalmahdy/GigaMan}}{}{}
@@ -455,13 +428,7 @@
             \item \textbf{Used Technologies}: \textbf{Libgdx}
         \end{itemize}
         \divider
-        \cvevent{\textbf{ScheduleMe}}
-        {\cvrepo{|\faGithub\faAndroid}
-        {https://github.com/eng-mohamedalmahdy/ScheduleMe}}{}{}
-        \begin{itemize}
-            \item \textbf{}An android application were you can add appointments to get notified when they come and add some notes to each appointment Using MVC and Alarm manager
-        \end{itemize}
-        \divider
+
         \cvevent{\textbf{Memorise}}
         {\cvrepo{|\faGithub\faApple}
         {https://github.com/eng-mohamedalmahdy/Memorise}

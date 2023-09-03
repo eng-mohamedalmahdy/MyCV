@@ -333,7 +333,7 @@
 % Fork: Tags separation partially achieved, missing vertical spaces consistency for now
 \newcommand{\cvtag}[1]{%
     \vspace{1pt}% Adjust the space on the left side of the tag
-    \tikz[baseline]\node[anchor=base,draw= ,thick,rounded corners,inner xsep=0.5ex,inner ysep=0.5ex,outer xsep=1.0ex,text centered,text height=2ex,text depth=0.5ex]{\textbf{#1}};
+    \tikz[baseline]\node[anchor=base,draw=TertiaryColor ,thick,rounded corners,inner xsep=0.5ex,inner ysep=0.5ex,outer xsep=1.0ex,text centered,text height=2ex,text depth=0.5ex]{\textbf{#1}};
     \vspace{1pt}% Adjust the space on the right side of the tag
 }
 

@@ -105,6 +105,7 @@
 % \documentclass[12pt]{scrartcl}
 \usepackage{lipsum}
 \usepackage{wasysym}
+%\usepackage{lstdoc}
 %
 %
 \usetikzlibrary{calc}
@@ -148,13 +149,46 @@
     % \AtBeginEnvironment{itemize}{\small}
 
     %% Set the left/right column width ratio to 6:4.
+
+
+    % ----- ABOUT ME -----
+    \cvsection{Profile}
+    \begin{quote}
+
+        \textbf{Mid-level}  Mobile Apps Engineer with \textbf{2+ years of hands-on experience},
+        adept in \textbf{Kotlin, Java \& Swift}.
+        Created \& Contributed at \textbf{10+ mobile Apps}.
+        My primary are in \textbf{Native Android}, \textbf{iOS} and \textbf{Kotlin Multiplatform} frameworks.
+        Possess a \textbf{solid foundation} in \textbf{digital marketing}, adding versatility to my tech expertise.
+    \end{quote}
+    % ----- ABOUT ME -----
+
+
+    \cvsection{Skills}
+    {\large\begin{itemize}
+               \item Strong grasp of \textbf{Object-Oriented Programming (OOP)} principles, \textbf{data structures}, and \textbf{algorithms}.
+               \item Proficient in \textbf{applying} and \textbf{using} common \textbf{design patterns}, \textbf{SOLID principles}, and best practices.
+               \item Solid understanding of \textbf{HTTP Requests} and working with \textbf{RESTful APIs}.
+               \item Expertise in version control systems such as \textbf{Git} and \textbf{GitHub}.
+               \item Proficient in implementing clean architecture patterns such as \textbf{MV(C, VM)} and \textbf{modularization}.
+               \item Skilled in \textbf{multithreading}, using built-in and external libraries like \textbf{Kotlin Coroutines} and \textbf{Swift GCD}.
+               \item Good knowledge of other programming paradigms such as \textbf{Functional} and \textbf{Reactive Programming}.
+               \item Proficient in applying \textbf{Dependency Injection} principles.
+               \item Experienced in creating and executing thorough \textbf{unit testing} procedures.
+    \end{itemize}}
+
     \columnratio{0.333334}
 
     % Start a 2-column paracol. Both the left and right columns will automatically
     % break across pages if things get too long.
+
+
+
     \begin{paracol}{2}
 
         % ----- LEARNING -----
+
+
         \cvsection{Programming Languages}
         \cvtag{Kotlin}
         \cvtag{Java}
@@ -163,22 +197,24 @@
 
         \cvsection{Frameworks}
         \cvtag{Native Android}
+        \cvtag{Kotlin Multiplatform}
         \cvtag{Native iOS}
 
-        \cvsection{Android skills}
+        \cvsection{Android Tools}
+        \cvtag{Kotlin Compose}
+        \cvtag{Coroutines}
         \cvtag{Retrofit}
-        \cvtag{Glide}
-        \cvtag{Picasso}
+        \cvtag{Rx Java \& Kotlin}
+        \cvtag{Image Loaders}
+        \cvtag{Koin}
         \cvtag{Room}
         \cvtag{Realm}
-        \cvtag{Rx Java \& Kotlin}
-        \cvtag{Flow}
-        \cvtag{Koin}
-        \cvtag{Coroutines}
         \cvtag{Dagger hilt}
-        \cvtag{Kotlin Compose}
+        \cvtag{JUnit}
+        \cvtag{MocKK}
+        \cvtag{Mockito}
 
-        \cvsection{iOS skills}
+        \cvsection{iOS Tools}
         \cvtag{UIkit}
         \cvtag{Storyboard}
         \cvtag{Auto layout}
@@ -187,33 +223,8 @@
         \cvtag{RX Swift \& Cocoa}
         \cvtag{Core Data}
         \cvtag{UserDefaults}
-        \cvtag{SwityJSON}
         \cvtag{Alamofire}
         \cvtag{Kingfisher}
-
-        \cvsection{General Software skills}
-        \cvtag{Problem solving}
-        \cvtag{VCS}
-        \cvtag{Firebase}
-        \linebreak
-        \cvtag{Apps Localization}
-
-        \cvsection{Software Concepts}
-        \cvtag{Software Engineering \& SDLC}
-        \cvtag{OOP}
-        \cvtag{Design patterns}
-        \cvtag{MVC}
-        \cvtag{MVVM}
-        \cvtag{Functional Programming}
-        \cvtag{Database}
-        \cvtag{RESTful APIs}
-        \cvtag{SOLID Principles}
-        \cvtag{Clean Architecture}
-        \cvtag{Modularization}
-        \linebreak
-        \cvtag{Concurrent Programming}
-        \linebreak
-        \cvtag{Dependency Injection}
 
 
         % ----- LEARNING -----
@@ -231,41 +242,33 @@
         %% page if the content is too long.
         \switchcolumn
 
-        % ----- ABOUT ME -----
-        \cvsection{Profile}
-        \begin{quote}
-
-            Innovative Mobile Apps Engineer with \textbf{2+ years of experience} , created and maintained \textbf{10+ mobile apps}.
-            I also Some possess skills in \textbf{Digital marketing}, making me a versatile professional in the tech industry.
-            My focus is on crafting user-centric mobile applications, and I'm passionate about creating software solutions.
-            Eager to contribute to the dynamic field of software development.
-        \end{quote}
-        % ----- ABOUT ME -----
 
         % ----- EXPERIENCE -----
         \cvsection{Experience}
 
-        \cvevent{Mid Level Android developer  }{| \textbf{DTag}}{04/2023 -- Now}{Cairo, Egypt}
+        \cvevent{Mid Level Android developer  }{| \href{https://www.linkedin.com/company/dtag/}{\textbf{DTag}}}{04/2023 -- Now}{Cairo, Egypt}
+        \begin{itemize}
+            \item Created \& Contributed in 3 Mobile Apps
+        \end{itemize}
         \divider
 
-        \cvevent{JR. Software developer  }{| \textbf{Virtual Worker Now}}{12/2021 -- 5/2022}{Cairo, Egypt}
+        \cvevent{JR. Software developer  }{| \href{https://www.linkedin.com/company/virtualworkernow/} {\textbf{Virtual Worker Now}}}{12/2021 -- 5/2022}{Cairo, Egypt}
         \begin{itemize}
             \item 3 Websites contributions
-            \item 2 Android Apps contributions
-            \item 1 iOS App contribution
-
+            \item 2 Mobile Apps contributions
         \end{itemize}
         \divider
 
-        \cvevent{Teaching }{| \textbf{Light Feather}}{2022 - NOW}{}
+%        \cvevent{Teaching }{| \textbf{Light Feather}}{2022 - NOW}{}
+%        \begin{itemize}
+%            \item  \href{https://www.youtube.com/c/LightFeather42}{YouTube Channel}
+%        \end{itemize}
+%        \divider
+
+        \cvevent{JR. Android developer }{| \href{https://www.linkedin.com/company/elmnassa/}{\textbf{ElMnassa Innovation}}}{6/2020 -- 12/2020}{Cairo, Egypt}
         \begin{itemize}
-            \item  \href{https://www.youtube.com/c/LightFeather42}{YouTube Channel}
-            \item  \href{https://lightfeather42.blogspot.com/}{Blog}
-
+            \item 2 Mobile Apps contributions
         \end{itemize}
-        \divider
-        \cvevent{JR. Android developer }{| \textbf{ElMnassa Innovation}}{6/2020 -- 12/2020}{Cairo, Egypt}
-        \divider
 
         % ----- EXPERIENCE -----
 
@@ -273,10 +276,7 @@
         \cvsection{Education}
         \cvevent{B.S Computer Engineering}{| \textbf{Al-Azhar University.}}{2017 -- 2021}{Cairo, Egypt}
         \begin{itemize}
-            \item Zakerly ( E-learning mobile App )
-            \begin{itemize}
-                \item Grade : Excellent
-            \end{itemize}
+            \item GP: \textbf{Zakerly ( E-learning mobile App )} Grade : \textbf{Excellent}
         \end{itemize}
 
 
@@ -285,25 +285,19 @@
         % ----- Courses -----
 
         \begin{multicols}{2}
-            \cvsection{Courses}
+            \cvsection{Recent Courses}
             \cvevent
             {\faApple  iOS using SwiftUI} {| \textbf{Stanford}}{}{}
-
             \divider
 
-            \cvevent
-            {\faAndroid  Kotlin boot camp}{| \textbf{Udacity}}{}{}
-            \divider
 
             \cvevent
-            {\faAndroid Android Dev in Java}{| \textbf{Udacity}}{}{}
+            {\faAndroid Android Development}{| \textbf{Udacity}}{}{}
             \divider
 
             \cvevent
             {\faEdit 5.95J Teaching Course}{| \textbf{MIT}}{}{}
-            \divider
 
-            \cvevent {\faApple iOS Boot Camp}{| \textbf{Tuwaiq ACAD}}{}{}
 
             \columnbreak
             \cvsection{Recent Books Readings}
@@ -323,7 +317,7 @@
         \cvevent{\textbf{Samoolah}}{\cvrepo{|\faLock\faAndroid}{}}{}{}
         \begin{itemize}
             \item \textbf{Services Provider} App With 2 Distributions 1 For the Client 1 For the Technician
-            \item \textbf{Used Technologies} : MVVM with \textbf{Modularization} - \textbf{Kotlin Compose} - Rest APIs with Retrofit \& Gson Serialization - Navigation Component - Kotlin Coroutines with Flows
+            \item \textbf{Used Technologies} : MVVM with \textbf{Modularization} - \textbf{Compose} - Rest APIs with Retrofit \& Gson Serialization - Navigation Component - Kotlin Coroutines with Flows
         \end{itemize}
         \divider
 

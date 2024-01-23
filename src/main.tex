@@ -12,25 +12,10 @@
 %% version 2003/12/01 or later.
 %%%%%%%%%%%%%%%%
 
-%% If you need to pass whatever options to xcolor
 \PassOptionsToPackage{dvipsnames}{xcolor}
-
-%% If you are using \orcid or academicons
-%% icons, make sure you have the academicons
-%% option here, and compile with XeLaTeX
-%% or LuaLaTeX.
-% \documentclass[10pt,a4paper,academicons]{altacv}
-
-%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
-% \documentclass[10pt,a4paper,normalphoto]{altacv}
-
 \documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
 
-%% AltaCV uses the fontawesome5 and academicons fonts
-%% and packages.
-%% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
 
-% Change the page layout if you need to
 \geometry{left=1.2cm,right=1.2cm,top=1cm,bottom=1cm,columnsep=0.75cm}
 
 % The paracol package lets you typeset columns of text in parallel
@@ -53,21 +38,17 @@
 \renewcommand{\familydefault}{\sfdefault}
 \fi
 
-% ----- MONO MODE -----
-%\definecolor{SlateGrey}{HTML}{2E2E2E}
-%\definecolor{LightGrey}{HTML}{666666}
-%\definecolor{PrimaryColor}{HTML}{000000}
-%\definecolor{SecondaryColor}{HTML}{000000}
-%\definecolor{ThirdColor}{HTML}{000000}
-%\colorlet{name}{PrimaryColor}
-%\colorlet{tagline}{PrimaryColor}
-%\colorlet{heading}{PrimaryColor}
-%\colorlet{headingrule}{ThirdColor}
-%\colorlet{subheading}{SecondaryColor}
-%\colorlet{accent}{SecondaryColor}
-%\colorlet{emphasis}{SlateGrey}
-%\colorlet{body}{LightGrey}
-% Define your branding colors
+
+%Famous Colors
+\definecolor{GitHubColor}{HTML}{171515}
+\definecolor{YouTubeColor}{HTML}{b2071d}
+\definecolor{LinkedInColor}{HTML}{0e76a8}
+\definecolor{KotlinPurbleColor}{HTML}{B125EA}
+\definecolor{KotlinPurbleBlueColor}{HTML}{7F52FF}
+\definecolor{KotlinRoseColor}{HTML}{E24462}
+\definecolor{AndroidGreenColor}{HTML}{3DDC84}
+\definecolor{SwiftOrangeColor}{HTML}{f05039}
+
 
 \definecolor{PrimaryColor}{HTML}{2E675F}  % Main text and headings
 \definecolor{SecondaryColor}{HTML}{0C0A49}  % Subheadings and accents
@@ -82,11 +63,11 @@
 \colorlet{subheading}{SecondaryColor}
 \colorlet{accent}{TertiaryColor}
 \colorlet{emphasis}{SecondaryColor}
-\colorlet{body}{LightGrey}  % Assuming you want to keep LightGrey as the background color
-
+\colorlet{body}{LightGrey}
 
 
 \pagecolor{BackgroundColor}
+
 
 
 % Change some fonts, if necessary
@@ -97,6 +78,7 @@
 
 % Change the bullets for itemize and rating marker
 % for \cvskill if you want to
+
 \renewcommand{\itemmarker}{{\small\textbullet}}
 \renewcommand{\ratingmarker}{\faCircle}
 
@@ -111,19 +93,9 @@
 \usetikzlibrary{calc}
 %
 \begin{document}
-% \begin{tikzpicture}[overlay,remember picture]
 
-%         \draw [xshift=4mm,line width=1pt,rounded corners=16pt]
-%         ($ (current page.north west) + (.5cm,-.5cm) $)
-%         rectangle
-%         ($ (current page.south east) + (-.5cm,.5cm) $);
-
-% \end{tikzpicture}
-%
     \name{Mohamed Almahdy}
     \tagline{Mobile Applications Developer}
-    %% You can add multiple photos on the left or right
-
     \personalinfo{
         \email{engmohamedalmahdy@gmail.com}\smallskip
         \mobile{+201096475710}
@@ -131,24 +103,10 @@
         \youtube{LightFeather42}
         \linkedin{https://www.linkedin.com/in/eng-mohamed-almahdy}
         \github{https://github.com/eng-mohamedalmahdy}
-
-    %\medium{nicolasomar}
-    %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
-    % \orcid{0000-0000-0000-0000}
-    %% You can add your own arbtrary detail with
-    %% \printinfo{symbol}{detail}[optional hyperlink prefix]
-    % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
-    %% Or you can declare your own field with
-    %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
-    % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
-    % \gitlab{your_id}
     }
 
     \makecvheader
-    %% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
-    % \AtBeginEnvironment{itemize}{\small}
 
-    %% Set the left/right column width ratio to 6:4.
 
 
     % ----- ABOUT ME -----
@@ -157,8 +115,8 @@
 
         \textbf{Mid-level}  Mobile Apps Engineer with \textbf{2+ years of hands-on experience},
         adept in \textbf{Kotlin, Java \& Swift}.
-        Created \& Contributed at \textbf{10+ mobile Apps}.
-        My primary are in \textbf{Native Android}, \textbf{iOS} and \textbf{Kotlin Multiplatform} frameworks.
+        \linebreak Created \& Contributed at \textbf{10+ mobile Apps}.
+        My primary are in \textbf{Native Android}, \textbf{iOS} \& \textbf{Kotlin Multiplatform} frameworks.
         Possess a \textbf{solid foundation} in \textbf{digital marketing}, adding versatility to my tech expertise.
     \end{quote}
     % ----- ABOUT ME -----
@@ -204,7 +162,6 @@
 
         % ----- LEARNING -----
 
-
         \cvsection{Programming Languages}
         \cvtag{Kotlin}
         \cvtag{Java}
@@ -241,19 +198,6 @@
         \cvtag{Kingfisher}
 
 
-        % ----- LEARNING -----
-
-        \newpage
-%         \begin{tikzpicture}[overlay,remember picture]
-
-%         \draw [xshift=4mm,line width=1pt,rounded corners=16pt]
-%         ($ (current page.north west) + (.5cm,-.5cm) $)
-%         rectangle
-%         ($ (current page.south east) + (-.5cm,.5cm) $);
-
-% \end{tikzpicture}
-        %% Switch to the right column. This will now automatically move to the second
-        %% page if the content is too long.
         \switchcolumn
 
         \cvsection{Skills}
@@ -284,12 +228,12 @@
         \begin{multicols}{2}
             \cvsection{Recent Courses}
             \cvevent
-            {\faApple  iOS using SwiftUI} {| \textbf{Stanford}}{}{}
+            {\color{SwiftOrangeColor}\faSwift  iOS using SwiftUI} {| \textbf{Stanford}}{}{}
             \divider
 
 
             \cvevent
-            {\faAndroid Android Development}{| \textbf{Udacity}}{}{}
+            {\color{AndroidGreenColor}\faAndroid Android Development}{| \textbf{Udacity}}{}{}
             \divider
 
             \cvevent
@@ -302,7 +246,7 @@
             \cvevent {\faBook Clean Architecture}{}{}{}
             \cvevent {\faBook Algorithms Unplugged}{}{}{}
             \cvevent {\faBook Head First OOA/D}{}{}{}
-            \cvevent {\faTrello  \href{https://trello.com/b/pkZlgQVu/my-readings-board}{\textbf{All My readings book list: \textcolor{SecondaryColor}{HERE}}}}{}{}{}
+            \cvevent {\faTrello  \href{https://trello.com/b/pkZlgQVu/my-readings-board}{My readings book list: \textbf{\textcolor{TertiaryColor}{HERE}}}}{}{}{}
 
         \end{multicols}
 
@@ -311,7 +255,7 @@
     \begin{paracol}{1}
         \cvsection{Personal Projects}
 
-        \cvevent{\textbf{Samoolah}}{\cvrepo{|\faLock\faAndroid}{}}{}{}
+        \cvevent{\color{AndroidGreenColor}\textbf{Samoolah}}{\cvrepo{|\color{AndroidGreenColor}\faLock\faAndroid}{}}{}{}
         \begin{itemize}
             \item \textbf{Services Provider} App With 2 Distributions 1 For the Client 1 For the Technician
             \item \textbf{Used Technologies} : MVVM with \textbf{Modularization} - \textbf{Compose} - Rest APIs with Retrofit \& Gson Serialization - Navigation Component - Kotlin Coroutines with Flows
@@ -320,8 +264,8 @@
 
 
 
-        \cvevent{\textbf{Masarify}}
-        {\cvrepo{|\faGooglePlay\faAndroid}
+        \cvevent{\color{AndroidGreenColor}\textbf{Masarify}}
+        {\cvrepo{\color{AndroidGreenColor}|\faGooglePlay\faAndroid}
         {https://play.google.com/store/apps/details?id=com.lightfeather.Masarify}}{}{}
         \begin{itemize}
             \item \textbf{Innovative expenses tracker App}
@@ -335,8 +279,8 @@
         \divider
 
 
-        \cvevent{\textbf{Islami 180}}
-        {\cvrepo{|\faGooglePlay\faAndroid}
+        \cvevent{\color{AndroidGreenColor}\textbf{Islami 180}}
+        {\cvrepo{\color{AndroidGreenColor}|\faGooglePlay\faAndroid}
         {https://play.google.com/store/apps/details?id=com.lightfeather.islami180}}{}{}
         \begin{itemize}
             \item \textbf{}Islamic application contains:
@@ -354,8 +298,8 @@
         \end{itemize}
         \divider
 
-        \cvevent{\textbf{Violet}}
-        {\cvrepo{|\faGithub\faAndroid\faGooglePlay}
+        \cvevent{\color{AndroidGreenColor}\textbf{Violet}}
+        {\cvrepo{\color{AndroidGreenColor}|\faGithub\faAndroid\faGooglePlay}
         {https://play.google.com/store/apps/details?id=com.lightfeather.violet}}{}{}
         \begin{itemize}
             \item Violet is a secret notes app where your notes can be accessed view the title of the note or 2FA method Your notes will also be stored in encrypted database so no one but you can see your notes
@@ -375,16 +319,16 @@
         \divider
 
 
-        \cvevent{\textbf{Pet Matrices}}
-        {\cvrepo{|\faLock\faApple}
+        \cvevent{\color{SwiftOrangeColor}\textbf{Pet Matrices}}
+        {\cvrepo{\color{SwiftOrangeColor}|\faLock\faSwift}
         {}}{}{}
         \begin{itemize}
             \item \textbf{}Pet Matrices is a lifestyle application for your pets where you can record and track your pets activities and given calories, you also can record and track their health condition and get some nice advice from an expert
             \item \textbf{Used Technologies} : \textbf{SwiftUI, REST API, MVVM archticture pattern, Swift GCD}
         \end{itemize}
         \divider
-        \cvevent{\textbf{Zakerly}}
-        {\cvrepo{|\faGithub\faAndroid}
+        \cvevent{\color{AndroidGreenColor}\textbf{Zakerly}}
+        {\cvrepo{\color{AndroidGreenColor}|\faGithub\faAndroid}
         {https://github.com/eng-mohamedalmahdy/Zakerly}}{}{}
         \begin{itemize}
             \item \textbf{}Zakerly is an app used to connect students with teachers to learn online as an E-learning service And helps them attending online sessions individuals or groups
@@ -398,8 +342,8 @@
         \end{itemize}
         \divider
 
-        \cvevent{\textbf{MusicHub}}
-        {\cvrepo{|\faGithub\faAndroid}
+        \cvevent{\color{AndroidGreenColor}\textbf{MusicHub}}
+        {\cvrepo{\color{AndroidGreenColor}|\faGithub\faAndroid}
         {https://github.com/eng-mohamedalmahdy/MusicHub}
         }{}{}
         \begin{itemize}
@@ -418,8 +362,8 @@
         \end{itemize}
         \divider
 
-        \cvevent{\textbf{Memorise}}
-        {\cvrepo{|\faGithub\faApple}
+        \cvevent{\color{SwiftOrangeColor}\textbf{Memorise}}
+        {\cvrepo{\color{SwiftOrangeColor}|\faGithub \faSwift}
         {https://github.com/eng-mohamedalmahdy/Memorise}
         }{}{}
         \begin{itemize}
@@ -430,7 +374,7 @@
 
         \begin{center}
             \textbf{\Large \href{https://github.com/eng-mohamedalmahdy}{More Projects at my GitHub}}
-            {\cvrepo{\faGithub}
+            {\cvrepo{\color{GitHubColor}\faGithub}
             {https://github.com/eng-mohamedalmahdy}}{}{}
         \end{center}
         \divider

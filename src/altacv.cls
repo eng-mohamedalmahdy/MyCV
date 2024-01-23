@@ -216,9 +216,9 @@
 \NewInfoField{phone}{\faPhoneSquar}
 \NewInfoField{homepage}{\faGlobe}[https://]
 \NewInfoField{twitter}{\faTwitter}[https://twitter.com/]
-\NewInfoField{linkedin}{\faLinkedin}[]
-\NewInfoField{github}{\faGithub}[]
-\NewInfoField{youtube}{\faIcon{youtube} }[https://www.youtube.com/c/]
+\NewInfoField{linkedin}{\color{LinkedInColor}\faLinkedin}[]
+\NewInfoField{github}{\color{GitHubColor}\faGithub}[]
+\NewInfoField{youtube}{\color{YouTubeColor}\faIcon{youtube} }[https://www.youtube.com/c/]
 \NewInfoField{location}{\faMapMarker}
 % Fork: New optional options added for dev and medium accounts
 \NewInfoField{dev}{\faDev}[]
@@ -310,13 +310,14 @@
 % Fork: structure modified to include change title, company name, start/end dates and work location (only a string)
 \newcommand{\cvevent}[4]{%
         {\normalsize\color{emphasis}#1}
-    \ifstrequal{#2}{}{}{\normalsize{\color{accent}#2}}
-    \par\normalsize
-    \ifstrequal{#3}{}{}{{\small\makebox[0.5\linewidth][l]{\color{accent}\faCalendar\color{emphasis}~#3}}}
-    \ifstrequal{#4}{}{}{{\small\makebox[0.7\linewidth][l]{}}}
+    \ifstrequal{#2}{}{}{\normalsize{\color{accent}#2}\hspace{3.0em}\hspace*{\fill}} % Adjust the space as needed
+%    \par
+    \normalsize
+    \ifstrequal{#3}{}{}{{\small\makebox[0.5\linewidth][l]{\textbf{\color{accent}\faCalendar\color{emphasis}~#3}}}}
     \par
     \medskip\normalsize
 }
+
 
 \newcommand{\cvachievement}[3]{%
     \begin{tabularx}{\linewidth}{@{}p{2em} @{\hspace{1ex}} >{\raggedright\arraybackslash}X@{}}

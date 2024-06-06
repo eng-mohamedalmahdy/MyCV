@@ -234,12 +234,12 @@
 
 \newcommand{\@makeaphoto}[2]{%
     \begin{minipage}{#1}%
-        \if@normalphoto
-        \includegraphics[width=\linewidth]{#2}
-        \else
+    \if@normalphoto
+    \includegraphics[width=\linewidth]{#2}
+    \else
 % Fork: The photo image has modified to include a border around it, which color is aligned to document's theme
-        \tikz\filldraw[color=headingrule, fill overzoom image={#2}, ultra thick](-1,0) circle[radius=0.5\linewidth];
-        \fi%
+    \tikz\filldraw[color=headingrule, fill overzoom image={#2}, ultra thick](-1,0) circle[radius=0.5\linewidth];
+    \fi%
     \end{minipage}%
 }
 
@@ -278,12 +278,12 @@
     \begingroup
     \altacv@left@photos\hfill%
     \begin{minipage}{\dimexpr\linewidth-\altacv@photos@width}%
-        \raggedright%
-        {\namefont\color{name}\MakeUppercase{\@name}\par}
-        \medskip
-        {\taglinefont\color{tagline}\@tagline\par}
-        \medskip
-        {\personalinfofont\@personalinfo\par}
+    \raggedright%
+    {\namefont\color{name}\MakeUppercase{\@name}\par}
+    \medskip
+    {\taglinefont\color{tagline}\@tagline\par}
+    \medskip
+    {\personalinfofont\@personalinfo\par}
     \end{minipage}\hfill%
     \altacv@right@photos\par%
     \endgroup\medskip
@@ -292,14 +292,17 @@
 \renewenvironment{quote}{\color{accent}\itshape\large}{\par}
 
 % Fork: Two bigskip tags added for better section separation
+
 \newcommand{\cvsection}[2][]{%
-    \bigskip
+    \vspace{0.7\baselineskip} % Reduce the top spacing
     \medskip
 
     \ifstrequal{#1}{}{}{\marginpar{\vspace*{\dimexpr1pt-\baselineskip}\raggedright\input{#1}}}%
-    {\color{heading}\cvsectionfont\MakeUppercase{#2}}\\[-1ex]%
+    {\color{heading}\Large\cvsectionfont\MakeUppercase{#2}}\\[-1ex]%
     {\color{headingrule}\rule{\linewidth}{2pt}\par}\medskip
 }
+
+
 
 \newcommand{\cvsubsection}[1]{%
     \smallskip%
@@ -321,8 +324,8 @@
 
 \newcommand{\cvachievement}[3]{%
     \begin{tabularx}{\linewidth}{@{}p{2em} @{\hspace{1ex}} >{\raggedright\arraybackslash}X@{}}
-        \multirow{2}{*}{\Large\color{accent}#1} & \bfseries\textcolor{emphasis}{#2} \\
-        & #3
+    \multirow{2}{*}{\Large\color{accent}#1} & \bfseries\textcolor{emphasis}{#2} \\
+    & #3
     \end{tabularx}%
     \smallskip
 }
@@ -352,6 +355,29 @@
     \textcolor{accent}{\textbf{#2}}
 }
 
+
+% Define custom Kotlin icon command
+\newcommand{\kotlinicon}{
+    \resizebox{1em}{!}{
+        \begin{tikzpicture}[y=0.8pt, x=0.8pt, yscale=-1, xscale=1, inner sep=0pt, outer sep=0pt]
+        % Include your SVG content here
+        \node[anchor=south west, inner sep=0] (image) at (0,0) {\includegraphics[width=1em]{kt}};
+        \end{tikzpicture}
+    }
+}
+
+
+\newcommand{\icon}[1]{%
+    \resizebox{1em}{!}{%
+        \begin{tikzpicture}[y=0.8pt, x=0.8pt, yscale=-1, xscale=1, inner sep=0pt, outer sep=0pt]
+        % Include your SVG content here
+        \node[anchor=south west, inner sep=0] (image) at (0,0) {\includegraphics[width=1em]{#1}};
+        \end{tikzpicture}%
+    }%
+}
+
+
+
 % Adapted from @Jake's answer at http://tex.stackexchange.com/a/82729/226
 \newcommand{\wheelchart}[4][0]{%
     \begingroup\centering
@@ -365,43 +391,43 @@
     }%
     \begin{tikzpicture}
 
-        % Calculate the thickness and the middle line of the wheel
-        \pgfmathsetmacro{\wheelwidth}{\outerradius-\innerradius}
-        \pgfmathsetmacro{\midradius}{(\outerradius+\innerradius)/2}
-        \pgfmathsetmacro{\totalrot}{-90 + #1}
+    % Calculate the thickness and the middle line of the wheel
+    \pgfmathsetmacro{\wheelwidth}{\outerradius-\innerradius}
+    \pgfmathsetmacro{\midradius}{(\outerradius+\innerradius)/2}
+    \pgfmathsetmacro{\totalrot}{-90 + #1}
 
-        % Rotate so we start from the top
-        \begin{scope}[rotate=\totalrot]
+    % Rotate so we start from the top
+    \begin{scope}[rotate=\totalrot]
 
-            % Loop through each value set. \cumnum keeps track of where we are in the wheel
-            \pgfmathsetmacro{\cumnum}{0}
-            \foreach \value/\width/\colour/\name in {#4} {
-                \pgfmathsetmacro{\newcumnum}{\cumnum + \value/\totalnum*360}
+    % Loop through each value set. \cumnum keeps track of where we are in the wheel
+    \pgfmathsetmacro{\cumnum}{0}
+    \foreach \value/\width/\colour/\name in {#4} {
+        \pgfmathsetmacro{\newcumnum}{\cumnum + \value/\totalnum*360}
 
-                % Calculate the percent value
-                \pgfmathsetmacro{\percentage}{\value/\totalnum*100}
-                % Calculate the mid angle of the colour segments to place the labels
-                \pgfmathsetmacro{\midangle}{-(\cumnum+\newcumnum)/2}
+        % Calculate the percent value
+        \pgfmathsetmacro{\percentage}{\value/\totalnum*100}
+        % Calculate the mid angle of the colour segments to place the labels
+        \pgfmathsetmacro{\midangle}{-(\cumnum+\newcumnum)/2}
 
-                % This is necessary for the labels to align nicely
-                \pgfmathparse{
-                    (-\midangle>180?"west":"east")
-                } \edef\textanchor{\pgfmathresult}
-                \pgfmathparse{
-                    (-\midangle>180?"flush left":"flush right")
-                } \edef\textalign{\pgfmathresult}
-                \pgfmathsetmacro\labelshiftdir{1-2*(-\midangle<180)}
+        % This is necessary for the labels to align nicely
+        \pgfmathparse{
+            (-\midangle>180?"west":"east")
+        } \edef\textanchor{\pgfmathresult}
+        \pgfmathparse{
+            (-\midangle>180?"flush left":"flush right")
+        } \edef\textalign{\pgfmathresult}
+        \pgfmathsetmacro\labelshiftdir{1-2*(-\midangle<180)}
 
-                % Draw the color segments. Somehow, the \midrow units got lost, so we add 'pt' at the end. Not nice...
-                \filldraw[draw=white,fill=\colour] (-\cumnum:\outerradius) arc (-\cumnum:-(\newcumnum):\outerradius) --
-                (-\newcumnum:\innerradius) arc (-\newcumnum:-(\cumnum):\innerradius) -- cycle;
+        % Draw the color segments. Somehow, the \midrow units got lost, so we add 'pt' at the end. Not nice...
+        \filldraw[draw=white,fill=\colour] (-\cumnum:\outerradius) arc (-\cumnum:-(\newcumnum):\outerradius) --
+        (-\newcumnum:\innerradius) arc (-\newcumnum:-(\cumnum):\innerradius) -- cycle;
 
-                % Draw the data labels
-                \draw  [*-,thin,emphasis] node [append after command={(\midangle:\midradius pt) -- (\midangle:\outerradius + 1ex) -- (\tikzlastnode)}] at (\midangle:\outerradius + 1ex) [xshift=\labelshiftdir*0.5cm,inner sep=1ex, outer sep=0pt, text width=\width,anchor=\textanchor,align=\textalign,font=\small,text=body]{\name};
-                % Set the old cumulated angle to the new value
-                \global\let\cumnum=\newcumnum
-            }
-        \end{scope}
+        % Draw the data labels
+        \draw  [*-,thin,emphasis] node [append after command={(\midangle:\midradius pt) -- (\midangle:\outerradius + 1ex) -- (\tikzlastnode)}] at (\midangle:\outerradius + 1ex) [xshift=\labelshiftdir*0.5cm,inner sep=1ex, outer sep=0pt, text width=\width,anchor=\textanchor,align=\textalign,font=\small,text=body]{\name};
+        % Set the old cumulated angle to the new value
+        \global\let\cumnum=\newcumnum
+    }
+    \end{scope}
 %      \draw[gray] (0,0) circle (\outerradius) circle (\innerradius);
     \end{tikzpicture}\par
     \endgroup
@@ -411,7 +437,7 @@
 \newcommand{\cvref}[2]{%
     \textcolor{emphasis}{\textbf{#1}}\par
     \begin{description}[font=\color{accent},style=multiline,leftmargin=1.35em,align=left]
-        \item[\small\normalfont\faLinkedin]\href{https://linkedin.com/in/#2}{#2}
+    \item[\small\normalfont\faLinkedin]\href{https://linkedin.com/in/#2}{#2}
     \end{description}
 }
 

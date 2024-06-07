@@ -46,6 +46,7 @@
 \RequirePackage{scrlfile}
 \RequirePackage{xparse}
 \RequirePackage{markdown}
+\RequirePackage{soul} % for custom underlining
 
 %% v1.1.5: added for convenience
 \newif\ifxetexorluatex
@@ -444,6 +445,16 @@
 \newcommand{\cvrepo}[2]{
     \textcolor{accent}{\href{#2}{#1}}
 }
+
+
+\soulregister{\href}7
+\soulregister{\textbf}7
+
+
+
+
+
+
 
 \newenvironment{cvcolumn}[1]{\begin{minipage}[t]{#1}
                                  \raggedright}{

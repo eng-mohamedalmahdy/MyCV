@@ -314,7 +314,7 @@
 % Fork: structure modified to include change title, company name, start/end dates and work location (only a string)
 \newcommand{\cvevent}[4]{%
         {\normalsize\color{emphasis}#1}
-    \ifstrequal{#2}{}{}{\normalsize{\color{accent}#2}\hspace{3.0em}\hspace*{\fill}} % Adjust the space as needed
+    \ifstrequal{#2}{}{}{\normalsize{\color{accent}#2}\hspace{2.0em}\hspace*{\fill}} % Adjust the space as needed
 %    \par
     \normalsize
     \ifstrequal{#3}{}{}{{\small\makebox[0.5\linewidth][l]{\textbf{\color{accent}\faCalendar\color{emphasis}~#3}}}}

@@ -153,7 +153,7 @@
 % \RequirePackage{marginfix}
 
 \setlength{\parindent}{0pt}
-\newcommand{\divider}{\textcolor{body!30}{\hdashrule{\linewidth}{0.5pt}{0.4ex}}\smallskip}
+\newcommand{\divider}{\textcolor{body!30}{\hdashrule{\linewidth}{0.5pt}{0.4ex}}\vspace{0.25\baselineskip}}
 
 \newenvironment{fullwidth}{%
     \begin{adjustwidth}{}{\dimexpr-\marginparwidth-\marginparsep\relax}}
@@ -295,7 +295,7 @@
 % Fork: Two bigskip tags added for better section separation
 
 \newcommand{\cvsection}[2][]{%
-    \vspace{0.7\baselineskip} % Reduce the top spacing
+    \vspace{0.2\baselineskip} % Reduce the top spacing
     \medskip
 
     \ifstrequal{#1}{}{}{\marginpar{\vspace*{\dimexpr1pt-\baselineskip}\raggedright\input{#1}}}%
